@@ -47,4 +47,3 @@ export default function Home() {
     </>
   );
 }
-const propiedades = await getPropiedades();
