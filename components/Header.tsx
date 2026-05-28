@@ -12,11 +12,15 @@ export default function Header() {
           
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-            <div className={styles.logoText}>
-              <h1>RMM</h1>
-              <p>Rocío Matamala</p>
-            </div>
-          </Link>
+  <Image
+    src="/logo-rmmV2.png"
+    alt="RMM Propiedades"
+    width={180}
+    height={80}
+    priority
+    className={styles.logoImage}
+  />
+</Link>
 
           {/* Navegación */}
           <nav className={styles.nav}>
@@ -28,7 +32,7 @@ export default function Header() {
 
           {/* WhatsApp CTA */}
           <a 
-            href="https://wa.me/56912345678" 
+            href="https://wa.me/56995665120" 
             className="btn"
             target="_blank"
             rel="noopener noreferrer"

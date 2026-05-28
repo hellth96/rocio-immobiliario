@@ -28,14 +28,14 @@ export default function Footer() {
             <h4>Contacto</h4>
             <p>📱 +56 9 XXXX XXXX</p>
             <p>📧 rocio@immobiliario.cl</p>
-            <p>🌐 rocioimmobiliario.cl</p>
+            <p>🌐 rmmpropiedades.cl</p>
           </div>
 
           <div className={styles.column}>
             <h4>Sígueme</h4>
             <ul>
               <li><a href="https://instagram.com/rocioimmobiliario" target="_blank">Instagram</a></li>
-              <li><a href="https://wa.me/56912345678" target="_blank">WhatsApp</a></li>
+              <li><a href="https://wa.me/56995665120" target="_blank">WhatsApp</a></li>
               <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
             </ul>
           </div>

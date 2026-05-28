@@ -26,9 +26,9 @@ export default function Footer() {
 
           <div className={styles.column}>
             <h4>Contacto</h4>
-            <p>📱 +56 9 XXXX XXXX</p>
-            <p>📧 rocio@immobiliario.cl</p>
-            <p>🌐 rocioimmobiliario.cl</p>
+            <p>📱 +56 9 9566 5120</p>
+            <p>📧 rocio_matamala@hotmail.com</p>
+            <p>🌐 rmmpropiedades.cl</p>
           </div>
 
         </div>

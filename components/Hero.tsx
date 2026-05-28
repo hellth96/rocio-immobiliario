@@ -27,7 +27,7 @@ export default function Hero() {
               Ver Propiedades
             </Link>
             <a 
-              href="https://wa.me/56912345678" 
+              href="https://wa.me/56995665120" 
               className="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
