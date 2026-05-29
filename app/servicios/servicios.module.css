@@ -1,0 +1,134 @@
+.hero {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 0px;
+  color: rgb(0, 0, 0);
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.95;
+  color: rgb(54, 54, 54);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  border: 2px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary);
+  box-shadow: 0 16px 40px rgba(74, 124, 89, 0.15);
+}
+
+.icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+.description {
+  color: var(--gray);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.detalles {
+  background: var(--light-gray);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.detalles h4 {
+  font-size: 14px;
+  color: var(--dark);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detalles ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detalles li {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.detalles li:last-child {
+  margin-bottom: 0;
+}
+
+.cta {
+  background: linear-gradient(135deg, var(--light-gray) 0%, white 100%);
+  padding: 10px 20px;
+  text-align: center;
+  border-top: 2px solid var(--border);
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+.cta p {
+  font-size: 18px;
+  color: var(--gray);
+  margin-bottom: 32px;
+}
+
+.cta .btn {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 60px 20px;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+  }
+}

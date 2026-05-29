@@ -1,24 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import styles from './Hero.module.css';
+import styles from './CTA.module.css';
 
-export default function Hero() {
+export default function CTA() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.section}>
+      <div className={styles.background} />
+      
       <div className="container">
         <div className={styles.content}>
-          
-          <h1 className={styles.title}>
-            Asesoría inmobiliaria con enfoque real en valor
-          </h1>
-          
-          <p className={styles.subtitle}>
-            Compra y venta de propiedades en Pirque y la Región Metropolitana,
-            con análisis, acompañamiento y criterio profesional en cada decisión.
+          <h2>¿Listo para encontrar tu propiedad?</h2>
+          <p>
+            Rocío está disponible para brindarte asesoría profesional en compra, 
+            venta o inversión inmobiliaria en Pirque.
           </p>
 
-          <div className={styles.cta}>
+          <div className={styles.buttons}>
             <a 
               href="https://wa.me/56995665120?text=Hola Rocío, quiero asesoría inmobiliaria"
               className={styles.btnPrimary}
@@ -27,8 +25,8 @@ export default function Hero() {
             >
               💬 Hablar por WhatsApp
             </a>
-            <Link href="/propiedades" className={styles.btnSecondary}>
-              Ver Propiedades
+            <Link href="/contacto" className={styles.btnSecondary}>
+              Contactar por Email
             </Link>
           </div>
 

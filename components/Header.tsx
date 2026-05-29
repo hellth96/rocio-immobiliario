@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Header.module.css';
+import Image from 'next/image';
+
 
 export default function Header() {
   return (
@@ -12,15 +13,15 @@ export default function Header() {
           
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-  <Image
-    src="/logo-rmmV2.png"
-    alt="RMM Propiedades"
-    width={180}
-    height={80}
-    priority
-    className={styles.logoImage}
-  />
-</Link>
+            <Image
+              src="/logo-rmm.png"
+              alt="RMM Logo"
+              width={100}
+              height={100}
+              className={styles.logoImage}
+            />
+            
+          </Link>
 
           {/* Navegación */}
           <nav className={styles.nav}>
@@ -32,12 +33,12 @@ export default function Header() {
 
           {/* WhatsApp CTA */}
           <a 
-            href="https://wa.me/56995665120?text=Hola Rocío, encontré tu página web y me gustaría hacer una consulta."
-            className="btn"
+            href="https://wa.me/56995665120?text=Hola Rocío, quiero asesoría inmobiliaria"
+            className={styles.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
           >
-            📱 WhatsApp
+            💬 WhatsApp
           </a>
         </div>
       </div>

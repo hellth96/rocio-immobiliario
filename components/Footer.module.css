@@ -1,8 +1,8 @@
 .footer {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, #4A7C59 0%, #1D5BA8 100%);
   color: white;
-  padding: 60px 0 30px;
-  margin-top: 80px;
+  padding: 50px 0 30px;
+  margin-top: 10px;
 }
 
 .grid {
@@ -15,45 +15,86 @@
 .column h4 {
   font-size: 18px;
   margin-bottom: 15px;
+  color: white;
+  font-weight: 600;
 }
 
 .column p {
   font-size: 14px;
   opacity: 0.9;
   margin-bottom: 8px;
+  color: white;
+}
+
+.column a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  font-size: 14px;
+}
+
+.column a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 12px;
+  opacity: 0.7;
 }
 
 .column ul {
   list-style: none;
+  padding: 0;
 }
 
 .column ul li {
   margin-bottom: 8px;
 }
 
-.column a {
-  color: white;
-  text-decoration: none;
-  opacity: 0.9;
-  transition: opacity 0.3s;
+.column ul li a {
+  color: #bbb;
 }
 
-.column a:hover {
-  opacity: 1;
-  text-decoration: underline;
+.column ul li a:hover {
+  color: hsl(142, 70%, 49%);
 }
 
 .bottom {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid #333;
   padding-top: 20px;
   text-align: center;
   font-size: 14px;
-  opacity: 0.8;
+  opacity: 0.7;
+}
+
+.bottom p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  .column h4 {
+    font-size: 16px;
+  }
+
+  .column p {
+    font-size: 13px;
+  }
+
+  .footer {
+    padding: 40px 0 20px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }

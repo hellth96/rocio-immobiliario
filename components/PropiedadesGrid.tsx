@@ -29,7 +29,7 @@ export default function PropiedadesGrid({ propiedades, limit = 6 }: PropiedadesG
   return (
     <section className={styles.section}>
       <div className="container">
-        <h2 className={styles.title}>Propiedades Destacadas</h2>
+        <h2 className={styles.title}>Propiedades Disponibles</h2>
         
         <div className={styles.grid}>
           {mostradas.map((prop) => (

@@ -1,0 +1,170 @@
+.section {
+  padding: 100px 20px;
+  background: #f6f7f9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 60px;
+}
+
+.header h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 26px;
+  border: 1px solid #eaeaea;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: #ddd;
+}
+
+.icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CTA */
+.cta {
+  background: #111;
+  color: white;
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta h3 {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+}
+
+.cta p {
+  margin-top: 6px;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.button {
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #20ba5e;
+  transform: scale(1.03);
+}
+
+@media (max-width: 1024px) {
+  .header h2 {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .header h2 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .cta h3 {
+    font-size: 18px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
