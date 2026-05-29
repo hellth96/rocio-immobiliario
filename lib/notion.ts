@@ -27,7 +27,6 @@ export interface Propiedad {
   foto: string;
 }
 
-// ✅ CORRECTO: Usar databases.query() NO search()
 export async function getPropiedadesDisponibles(): Promise<Propiedad[]> {
   try {
     const response = await fetch(
@@ -62,68 +61,46 @@ export async function getPropiedadesDisponibles(): Promise<Propiedad[]> {
 
     const data = await response.json();
 
-    console.log(data);
-
-    return data.results
-      .map((page: any): Propiedad | null => {
+    const results: (Propiedad | null)[] = (data.results ?? []).map(
+      (page: any): Propiedad | null => {
         try {
           const props = page.properties;
 
           return {
             id: page.id,
-            dirección:
-              props.Dirección?.title?.[0]?.plain_text || "Sin dirección",
-
-            tipo:
-              props["Tipo Propiedad"]?.select?.name || "Propiedad",
-
-            precio:
-              props["Precio Venta"]?.number || 0,
-
-            m2Construcción:
-              props["M² Construcción"]?.number || 0,
-
-            m2Terreno:
-              props["M² Terreno"]?.number || 0,
-
-            dormitorios:
-              props.Dormitorios?.number || 0,
-
-            baños:
-              props.Baños?.number || 0,
-
-            estacionamientos:
-              props.Estacionamientos?.number || 0,
-
+            dirección: props.Dirección?.title?.[0]?.plain_text || "Sin dirección",
+            tipo: props["Tipo Propiedad"]?.select?.name || "Propiedad",
+            precio: props["Precio Venta"]?.number || 0,
+            m2Construcción: props["M² Construcción"]?.number || 0,
+            m2Terreno: props["M² Terreno"]?.number || 0,
+            dormitorios: props.Dormitorios?.number || 0,
+            baños: props.Baños?.number || 0,
+            estacionamientos: props.Estacionamientos?.number || 0,
             especialidades:
               props.Especialidades?.multi_select?.map((s: any) => s.name) || [],
-
-            derechosAgua:
-              props["Derechos Agua"]?.select?.name || "No",
-
+            derechosAgua: props["Derechos Agua"]?.select?.name || "No",
             documentacionCompleta:
               props["Documentación Completa"]?.checkbox || false,
-
-            estado:
-              props.Estado?.select?.name || "Disponible",
-
+            estado: props.Estado?.select?.name || "Disponible",
             descripción:
               props["Descripción Publicación"]?.rich_text?.[0]?.plain_text ||
               "Sin descripción",
-
             notasZona:
               props["Notas Zona"]?.rich_text?.[0]?.plain_text || "",
-
             foto:
               props["Foto Principal"]?.files?.[0]?.file?.url ||
               "/placeholder.jpg",
           };
         } catch (err) {
-          console.error(err);
+          console.error("Error parsing propiedad:", err);
           return null;
         }
-      })
-      .filter((p): p is Propiedad => p !== null);
+      }
+    );
+
+    return results.filter(
+      (p): p is Propiedad => p !== null
+    );
   } catch (error) {
     console.error("Error fetching propiedades:", error);
     return [];
