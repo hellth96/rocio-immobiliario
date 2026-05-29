@@ -1,8 +1,6 @@
-import { Client } from "@notionhq/client";
 
-const notion = new Client({
-  auth: process.env.NOTION_API_KEY,
-});
+import { notion } from "./notionClient";
+
 
 const PROPIEDADES_DB = process.env.NOTION_PROPIEDADES_DB!;
 const COMPRADORES_DB = process.env.NOTION_COMPRADORES_DB!;
@@ -152,7 +150,7 @@ export async function getCompradores(): Promise<any[]> {
           is_not_empty: true,
         },
       },
-    });
+   });
 
     return response.results.map((page: any) => {
       const props = page.properties;
