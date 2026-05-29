@@ -1,6 +1,7 @@
 'use client';
 
-import styles from './Diferenciadores.module.css';
+
+import styles from '@/styles/Diferenciadores.module.css';
 
 export default function Diferenciadores() {
   return (
