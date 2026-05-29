@@ -65,7 +65,7 @@ export async function getPropiedadesDisponibles(): Promise<Propiedad[]> {
     console.log(data);
 
     return data.results
-      .map((page: any) => {
+      .map((page: any): Propiedad | null => {
         try {
           const props = page.properties;
 
