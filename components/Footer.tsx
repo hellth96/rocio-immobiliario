@@ -27,14 +27,14 @@ export default function Footer() {
           <div className={styles.column}>
             <h4>Contacto</h4>
             <p>📱 +56 9 9566 5120</p>
-            <p>📧 rocio_matamala@hotmail.com</p>
+            <p>📧 rosio.matamala.m@gmail.com</p>
             <p>🌐 rmmpropiedades.cl</p>
           </div>
 
         </div>
 
         <div className={styles.bottom}>
-          <p>© 2026 Rocío Matamala</p>
+          <p>© RMM propiedades Desde 2021</p>
         </div>
       </div>
     </footer>

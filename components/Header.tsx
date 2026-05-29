@@ -32,7 +32,7 @@ export default function Header() {
 
           {/* WhatsApp CTA */}
           <a 
-            href="https://wa.me/56995665120" 
+            href="https://wa.me/56995665120?text=Hola Rocío, encontré tu página web y me gustaría hacer una consulta."
             className="btn"
             target="_blank"
             rel="noopener noreferrer"

@@ -1,60 +1,33 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import PropiedadesGrid from '../../components/PropiedadesGrid';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import PropiedadesGrid from '@/components/PropiedadesGrid';
+import { getPropiedadesDisponibles } from '@/lib/notion';
 
-const todasLasPropiedades = [
-  {
-    id: '1',
-    dirección: 'Avenida Principal 123, Pirque',
-    precio: 580000000,
-    tipo: 'Casa',
-    m2Construcción: 280,
-    m2Terreno: 650,
-    foto: '/placeholder-1.jpg',
-    descripción: 'Casa amplia con derechos de agua'
-  },
-  {
-    id: '2',
-    dirección: 'Edificio Las Coníferas, Piso 8, Pirque',
-    precio: 350000000,
-    tipo: 'Departamento',
-    m2Construcción: 85,
-    m2Terreno: 0,
-    foto: '/placeholder-2.jpg',
-    descripción: 'Departamento con piscina y gym'
-  },
-  {
-    id: '3',
-    dirección: 'Camino Privado Los Robles, Pirque',
-    precio: 1200000000,
-    tipo: 'Parcela',
-    m2Construcción: 0,
-    m2Terreno: 25000,
-    foto: '/placeholder-3.jpg',
-    descripción: 'Parcela 2.5 hectáreas con agua'
-  },
-];
+export const revalidate = 3600; // Revalidar cada hora
 
-export default function PropiedadesPage() {
+export const metadata = {
+  title: 'Propiedades en venta Pirque | Rocío Matamala',
+  description: '20+ propiedades disponibles en Pirque. Casa, departamento, terreno, parcela.',
+};
+
+export default async function Propiedades() {
+  const propiedades = await getPropiedadesDisponibles();
+
   return (
     <>
       <Header />
-
-      <div
-        style={{
-          paddingTop: '60px',
-          paddingBottom: '20px',
-          textAlign: 'center'
-        }}
-      >
-        <h1>Todas nuestras propiedades</h1>
+      
+      <div className="container" style={{ paddingTop: '80px', marginBottom: '40px' }}>
+        <h1 style={{ fontSize: '36px', marginBottom: '10px' }}>
+          Propiedades Disponibles
+        </h1>
+        <p style={{ fontSize: '16px', color: '#666' }}>
+          Revisa nuestras {propiedades.length} propiedades en venta
+        </p>
       </div>
 
-      <PropiedadesGrid
-        propiedades={todasLasPropiedades}
-        limit={20}
-      />
-
+      <PropiedadesGrid propiedades={propiedades} />
+      
       <Footer />
     </>
   );

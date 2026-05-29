@@ -26,15 +26,15 @@ export default function Footer() {
 
           <div className={styles.column}>
             <h4>Contacto</h4>
-            <p>📱 +56 9 XXXX XXXX</p>
-            <p>📧 rocio@immobiliario.cl</p>
+            <p>📱 +56 9 9566 5120</p>
+            <p>📧 rosio.matamala.m@gmail.com</p>
             <p>🌐 rmmpropiedades.cl</p>
           </div>
 
           <div className={styles.column}>
             <h4>Sígueme</h4>
             <ul>
-              <li><a href="https://instagram.com/rocioimmobiliario" target="_blank">Instagram</a></li>
+              <li><a href="https://instagram.com/rmm.propiedades" target="_blank">Instagram</a></li>
               <li><a href="https://wa.me/56995665120" target="_blank">WhatsApp</a></li>
               <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
             </ul>
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; 2026 Rocío Matamala. Todos los derechos reservados.</p>
+          <p>&copy; 2026 RMM Propiedades. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
